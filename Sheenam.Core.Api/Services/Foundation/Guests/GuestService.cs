@@ -1,0 +1,18 @@
+﻿using Sheenam.Core.Api.Brokers.Storages;
+using Sheenam.Core.Api.Models.Foundation.Guests;
+
+namespace Sheenam.Core.Api.Services.Foundation.Guests
+{
+    public class GuestService : IGuestService
+    {
+        private readonly IStorageBroker storageBroker;
+
+        public GuestService(IStorageBroker storageBroker) =>
+            this.storageBroker = storageBroker;
+
+        public ValueTask<Guest> AddGuestAsync(Guest guest)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
