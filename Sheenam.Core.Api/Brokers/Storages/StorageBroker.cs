@@ -5,7 +5,6 @@
 
 using EFxceptions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Sheenam.Core.Api.Brokers.Storages
 {
