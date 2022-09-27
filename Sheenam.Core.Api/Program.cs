@@ -3,8 +3,6 @@
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
 
-using Microsoft.AspNetCore.Hosting;
-
 namespace Sheenam.Core.Api
 {
     public class Program
