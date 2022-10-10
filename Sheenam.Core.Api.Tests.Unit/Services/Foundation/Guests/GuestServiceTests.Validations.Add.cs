@@ -25,9 +25,8 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
                 this.guestService.AddGuestAsync(nullGuest);
 
             // then
-            _ = await Assert.ThrowsAsync<GuestValidationException>(() =>
+            await Assert.ThrowsAsync<GuestValidationException>(() =>
             addGuestTask.AsTask());
         }
-
     }
 }

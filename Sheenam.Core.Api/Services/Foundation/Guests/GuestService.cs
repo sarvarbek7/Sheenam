@@ -3,6 +3,7 @@
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
 
+using Sheenam.Core.Api.Brokers.Loggings;
 using Sheenam.Core.Api.Brokers.Storages;
 using Sheenam.Core.Api.Models.Foundation.Guests;
 
@@ -11,11 +12,24 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
     public class GuestService : IGuestService
     {
         private readonly IStorageBroker storageBroker;
+        private readonly ILoggingBroker loggingBroker;
 
-        public GuestService(IStorageBroker storageBroker) =>
+        public GuestService(IStorageBroker storageBroker)
+        {
             this.storageBroker = storageBroker;
+        }
 
-        public async ValueTask<Guest> AddGuestAsync(Guest guest) =>
-            await this.storageBroker.InsertGuestAsync(guest);
+        public GuestService(
+            IStorageBroker storageBroker,
+            ILoggingBroker loggingBroker)
+        {
+            this.storageBroker = storageBroker;
+            this.loggingBroker = loggingBroker;
+        }
+
+        public async ValueTask<Guest> AddGuestAsync(Guest guest)
+        {
+           return await this.storageBroker.InsertGuestAsync(guest);
+        }
     }
 }
