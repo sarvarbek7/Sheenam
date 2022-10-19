@@ -6,7 +6,7 @@
 using Sheenam.Core.Api.Brokers.Loggings;
 using Sheenam.Core.Api.Brokers.Storages;
 using Sheenam.Core.Api.Models.Foundation.Guests;
-using Sheenam.Core.Api.Services.Foundation.Guests.Exceptions;
+using Sheenam.Core.Api.Models.Foundation.Guests.Exceptions;
 
 namespace Sheenam.Core.Api.Services.Foundation.Guests
 {
