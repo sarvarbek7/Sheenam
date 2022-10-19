@@ -40,5 +40,16 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
             this.loggingBrokerMock.VerifyNoOtherCalls();
             this.storageBrokerMock.VerifyNoOtherCalls();
         }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData(" ")]
+        public async Task ShouldThrowValidationExceptionOnAddIfGuestIsInvalidAndLogItAsync(
+            string invalidText)
+        {
+
+        }
+
     }
 }
