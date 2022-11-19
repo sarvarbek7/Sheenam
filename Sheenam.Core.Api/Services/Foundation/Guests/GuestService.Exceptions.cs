@@ -21,8 +21,7 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
             }
             
             catch (NullGuestException nullGuestException)
-            {
-                
+            {         
                 throw CreateAndLogValidationException(nullGuestException);
             }
         }

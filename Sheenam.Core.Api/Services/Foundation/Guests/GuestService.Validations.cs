@@ -17,5 +17,7 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
                 throw new NullGuestException();
             }
         }
+
+
     }
 }
