@@ -7,7 +7,7 @@
 using FluentAssertions;
 using Force.DeepCloner;
 using Moq;
-using Sheenam.Core.Api.Models.Foundation.Guests;
+using Sheenam.Core.Api.Models.Guests;
 using Xunit;
 
 namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests

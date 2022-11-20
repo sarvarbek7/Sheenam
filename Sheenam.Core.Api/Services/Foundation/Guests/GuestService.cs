@@ -5,7 +5,7 @@
 
 using Sheenam.Core.Api.Brokers.Loggings;
 using Sheenam.Core.Api.Brokers.Storages;
-using Sheenam.Core.Api.Models.Foundation.Guests;
+using Sheenam.Core.Api.Models.Guests;
 
 namespace Sheenam.Core.Api.Services.Foundation.Guests
 {
@@ -13,11 +13,6 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
     {
         private readonly IStorageBroker storageBroker;
         private readonly ILoggingBroker loggingBroker;
-
-        public GuestService(IStorageBroker storageBroker)
-        {
-            this.storageBroker = storageBroker;
-        }
 
         public GuestService(
             IStorageBroker storageBroker,
@@ -30,7 +25,7 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
         public ValueTask<Guest> AddGuestAsync(Guest guest) =>
             TryCatch(async () =>
             {
-                ValidateGuestNotNull(guest);
+                ValidateGuestOnAdd(guest);
 
                 return await this.storageBroker.InsertGuestAsync(guest);
             }); 

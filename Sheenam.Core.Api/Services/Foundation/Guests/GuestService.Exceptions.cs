@@ -4,8 +4,8 @@
 // -------------------------------------------------------
 
 
-using Sheenam.Core.Api.Models.Foundation.Guests;
-using Sheenam.Core.Api.Models.Foundation.Guests.Exceptions;
+using Sheenam.Core.Api.Models.Guests;
+using Sheenam.Core.Api.Models.Guests.Exceptions;
 using Xeptions;
 
 namespace Sheenam.Core.Api.Services.Foundation.Guests
@@ -24,8 +24,12 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
             {         
                 throw CreateAndLogValidationException(nullGuestException);
             }
+            catch (InvalidGuestException invalidGuestException)
+            {
+                throw CreateAndLogValidationException(invalidGuestException);
+            }
         }
-
+        
         private GuestValidationException CreateAndLogValidationException(Xeption exception)
         {
             var guestValidationException =

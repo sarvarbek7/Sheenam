@@ -3,8 +3,8 @@
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
 using Moq;
-using Sheenam.Core.Api.Models.Foundation.Guests;
-using Sheenam.Core.Api.Models.Foundation.Guests.Exceptions;
+using Sheenam.Core.Api.Models.Guests;
+using Sheenam.Core.Api.Models.Guests.Exceptions;
 using Xunit;
 
 namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests

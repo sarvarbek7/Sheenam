@@ -4,7 +4,7 @@
 // -------------------------------------------------------
 
 using Xeptions;
-namespace Sheenam.Core.Api.Models.Foundation.Guests.Exceptions
+namespace Sheenam.Core.Api.Models.Guests.Exceptions
 {
     public class GuestValidationException : Xeption
     {

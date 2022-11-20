@@ -3,8 +3,7 @@
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
 
-
-namespace Sheenam.Core.Api.Models.Foundation.Guests
+namespace Sheenam.Core.Api.Models.Guests
 {
     public class Guest
     {
