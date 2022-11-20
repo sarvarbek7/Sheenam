@@ -2,13 +2,13 @@
 // Copyright (c) Coalition of the Good-Hearted Engineers
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
-
-using Sheenam.Core.Api.Models.Guests;
-
-namespace Sheenam.Core.Api.Services.Foundation.Guests
+using Xeptions;
+namespace Sheenam.Core.Api.Models.Guests.Exceptions
 {
-    public interface IGuestService
+    public class NullGuestException : Xeption
     {
-        public ValueTask<Guest> AddGuestAsync(Guest guest);
+        public NullGuestException()
+            : base(message: "Guest is null")
+        { }
     }
 }

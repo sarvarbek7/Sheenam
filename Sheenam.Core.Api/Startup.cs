@@ -1,4 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
+using Sheenam.Core.Api.Brokers.Loggings;
 using Sheenam.Core.Api.Brokers.Storages;
 
 namespace Sheenam.Core.Api
@@ -55,6 +56,7 @@ namespace Sheenam.Core.Api
         private static void AddBrokers(IServiceCollection services)
         {
             services.AddTransient<IStorageBroker, StorageBroker>();
+            services.AddTransient<ILoggingBroker, LoggingBroker>();
         }
     }
 }

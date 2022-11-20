@@ -5,7 +5,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Sheenam.Core.Api.Models.Foundation.Guests;
+using Sheenam.Core.Api.Models.Guests;
 
 namespace Sheenam.Core.Api.Brokers.Storages
 {
