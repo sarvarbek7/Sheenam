@@ -19,7 +19,6 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
             {
                 return await returningGuestFunction();
             }
-            
             catch (NullGuestException nullGuestException)
             {         
                 throw CreateAndLogValidationException(nullGuestException);
