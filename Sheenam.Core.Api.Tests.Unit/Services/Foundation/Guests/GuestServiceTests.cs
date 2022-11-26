@@ -57,7 +57,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
             return actualException =>
                 actualException.Message == expectedGuestValidationException.Message
                 && actualException.InnerException.Message == expectedGuestValidationException.InnerException.Message
-                && (actualException.InnerException as Xeption).DataEquals(expectedGuestValidationException.Data);
+                && (actualException.InnerException as Xeption).DataEquals(expectedGuestValidationException.InnerException.Data);
         }
 
         private static Filler<Guest> CreateGuestFiller(DateTimeOffset date)

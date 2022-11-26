@@ -78,7 +78,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
 
             invalidGuestException.AddData(
                 key: nameof(Guest.Email),
-                values: "Email is required");
+                values: "Text is required");
 
             var expectedGuestValidationException = 
                 new GuestValidationException(invalidGuestException);
@@ -92,9 +92,8 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
                 addGuestTask.AsTask());
 
             this.loggingBrokerMock.Verify(broker =>
-                broker.LogError(It.Is(SameExceptionAs(
-                    expectedGuestValidationException))),
-                    Times.Once);
+                broker.LogError(It.Is(SameExceptionAs(expectedGuestValidationException))),
+                Times.Once);
 
             this.storageBrokerMock.Verify(broker =>
                 broker.InsertGuestAsync(It.IsAny<Guest>()),
@@ -129,9 +128,8 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
                 addGuestTask.AsTask());
 
             this.loggingBrokerMock.Verify(broker =>
-                broker.LogError(It.Is(SameExceptionAs(
-                    expectedGuestValidationException))),
-                    Times.Once);
+                broker.LogError(It.Is(SameExceptionAs(expectedGuestValidationException))),
+                Times.Once);
 
             this.storageBrokerMock.Verify(broker =>
                 broker.InsertGuestAsync(It.IsAny<Guest>()),
