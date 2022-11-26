@@ -115,7 +115,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
 
             invalidGuestException.AddData(
                 key: nameof(Guest.Gender),
-                values: "Value is invalid");
+                values: "Gender is invalid");
 
             var expectedGuestValidationException =
                 new GuestValidationException(invalidGuestException);
