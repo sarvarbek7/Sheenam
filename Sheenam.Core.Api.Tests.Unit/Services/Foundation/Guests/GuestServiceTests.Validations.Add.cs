@@ -136,7 +136,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
                 Times.Never);
 
             this.loggingBrokerMock.VerifyNoOtherCalls();
-            this.storageBrokerMock.VerifyNoOtherCalls();    
+            this.storageBrokerMock.VerifyNoOtherCalls();
         }
     }
 }
