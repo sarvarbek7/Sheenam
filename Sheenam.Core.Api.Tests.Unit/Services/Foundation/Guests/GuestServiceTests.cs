@@ -54,10 +54,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
 
         private Expression<Func<Xeption, bool>> SameExceptionAs(Xeption expectedGuestValidationException)
         {
-            return actualException =>
-                actualException.Message == expectedGuestValidationException.Message
-                && actualException.InnerException.Message == expectedGuestValidationException.InnerException.Message
-                && (actualException.InnerException as Xeption).DataEquals(expectedGuestValidationException.InnerException.Data);
+            return actualException => actualException.SameExceptionAs(expectedGuestValidationException);
         }
 
         private static Filler<Guest> CreateGuestFiller(DateTimeOffset date)
