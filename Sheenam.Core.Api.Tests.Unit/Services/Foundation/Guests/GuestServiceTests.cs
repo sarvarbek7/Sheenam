@@ -42,6 +42,9 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
         private static int GetRandomNumber() =>
             new IntRange(2, 9).GetValue();
 
+        private static string GetRandomMessage() =>
+            new MnemonicString().GetValue();
+
         private static SqlException GetSqlError() =>
             (SqlException)FormatterServices.GetUninitializedObject(typeof(SqlException));
         private static T GetInvalidEnum<T>()
