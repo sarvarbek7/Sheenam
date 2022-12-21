@@ -2,9 +2,9 @@
 
 namespace Sheenam.Core.Api.Models.Guests.Exceptions
 {
-    public class FailedServiceException : Xeption
+    public class FailedGuestServiceException : Xeption
     {
-        public FailedServiceException(Exception innerException)
+        public FailedGuestServiceException(Exception innerException)
             :base(message: "Service failed. Please contact support",
                  innerException)
         { }

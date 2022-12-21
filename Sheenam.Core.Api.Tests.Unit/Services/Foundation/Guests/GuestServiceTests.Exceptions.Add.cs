@@ -92,7 +92,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
             // given
             var someGuest = CreateRandomGuest();
             var exception = new Exception();
-            var failedServiceException = new FailedServiceException(exception);
+            var failedServiceException = new FailedGuestServiceException(exception);
             var expectedServiceException = new GuestServiceException(failedServiceException);
 
             this.storageBrokerMock.Setup(broker =>
