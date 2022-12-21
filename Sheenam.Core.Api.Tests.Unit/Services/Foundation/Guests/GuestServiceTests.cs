@@ -59,7 +59,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
             return (T)(object)randomNumber;
         }
 
-        private Expression<Func<Xeption, bool>> SameExceptionAs(Xeption expectedGuestValidationException)
+        private Expression<Func<Xeption, bool>> SameExceptionAs(Xeption expectedGuestValidationException) =>
         {
             return actualException => actualException.SameExceptionAs(expectedGuestValidationException);
         }
