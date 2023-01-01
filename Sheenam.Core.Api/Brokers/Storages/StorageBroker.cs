@@ -27,6 +27,5 @@ namespace Sheenam.Core.Api.Brokers.Storages
         }
 
         public override void Dispose() { }
-
     }
 }

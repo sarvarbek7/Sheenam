@@ -4,6 +4,7 @@
 // -------------------------------------------------------
 
 using System.Data;
+using System.Reflection.Metadata;
 using Sheenam.Core.Api.Models.Guests;
 using Sheenam.Core.Api.Models.Guests.Exceptions;
 
@@ -21,7 +22,8 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
                 (Rule: IsInvalid(guest.LastName), Parameter: nameof(guest.LastName)),
                 (Rule: IsInvalid(guest.DateOfBirth), Parameter: nameof(guest.DateOfBirth)),
                 (Rule: IsInvalid(guest.Address), Parameter: nameof(guest.Address)),
-                (Rule: IsInvalid(guest.Email), Parameter: nameof(guest.Email))
+                (Rule: IsInvalid(guest.Email), Parameter: nameof(guest.Email)),
+                (Rule: IsInvalid(guest.Gender), Parameter: nameof(guest.Gender))
                 );
         }
 
@@ -36,7 +38,7 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
         static private dynamic IsInvalid(Guid id) => new
         {
             Condition = id == Guid.Empty,
-            Message = "Id is required"
+            Message = "ID is required"
         };
 
         static private dynamic IsInvalid(string text) => new
@@ -49,6 +51,12 @@ namespace Sheenam.Core.Api.Services.Foundation.Guests
         {
             Condition = date == default,
             Message = "Date is required"
+        };
+
+        static private dynamic IsInvalid(GenderType gender) => new
+        {
+            Condition = Enum.IsDefined(typeof(GenderType), gender) is false,
+            Message = "Gender is invalid"
         };
 
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)

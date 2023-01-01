@@ -1,4 +1,4 @@
-﻿namespace Sheenam.Web.Api.Brokers.DateTimes
+﻿namespace Sheenam.Core.Api.Brokers.DateTimes
 {
     public class DateTimeBroker : IDateTimeBroker
     {

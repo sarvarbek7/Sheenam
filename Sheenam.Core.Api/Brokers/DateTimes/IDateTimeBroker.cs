@@ -5,7 +5,7 @@
 
 using System;
 
-namespace Sheenam.Web.Api.Brokers.DateTimes
+namespace Sheenam.Core.Api.Brokers.DateTimes
 {
     public interface IDateTimeBroker
     {
