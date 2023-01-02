@@ -1,11 +1,8 @@
-// -------------------------------------------------------
-// Copyright (c) Coalition of the Good-Hearted Engineers
-// FREE TO USE FOR THE WORLD
-// -------------------------------------------------------
+﻿using Sheenam.Core.Api.Models.Guests;
 
-namespace Sheenam.Core.Api.Models.Guests
+namespace Sheenam.Core.Api.Models.Hosts
 {
-    public class Guest
+    public class Host
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
