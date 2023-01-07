@@ -2,6 +2,7 @@
 // Copyright (c) Coalition of the Good-Hearted Engineers
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
+
 using Moq;
 using Sheenam.Core.Api.Models.Guests;
 using Sheenam.Core.Api.Models.Guests.Exceptions;
@@ -12,7 +13,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Guests
     public partial class GuestServiceTests
     {
         [Fact]
-        public async void ShouldThrowValidationExceptionOnRegisterWhenStudentIsNullAndLogItAsync()
+        public async void ShouldThrowValidationExceptionOnAddWhenStudentIsNullAndLogItAsync()
         {
             // given
             Guest nullGuest = null;
