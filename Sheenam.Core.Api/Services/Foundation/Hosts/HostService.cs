@@ -9,7 +9,7 @@ using sheenam = Sheenam.Core.Api.Models.Hosts;
 
 namespace Sheenam.Core.Api.Services.Foundation.Hosts
 {
-    public class HostService : IHostService
+    public partial class HostService : IHostService
     {
         private readonly IStorageBroker storageBroker;
         private readonly ILoggingBroker loggingBroker;
@@ -20,10 +20,12 @@ namespace Sheenam.Core.Api.Services.Foundation.Hosts
             this.loggingBroker = loggingBroker;
         }
 
-        public async ValueTask<sheenam.Host> AddHostAsync(sheenam.Host host)
-        {
-            sheenam.Host returninghost = await this.storageBroker.InsertHostAsync(host);
-            return returninghost;
-        }
+        public ValueTask<sheenam.Host> AddHostAsync(sheenam.Host host) =>
+            TryCatch(async () =>
+            {
+                ValidateHostOnAdd(host);
+
+                return await this.storageBroker.InsertHostAsync(host);
+            });
     }
 }

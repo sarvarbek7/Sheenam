@@ -3,8 +3,6 @@
 // FREE TO USE FOR THE WORLD
 // -------------------------------------------------------
 
-using System.Data;
-using System.Reflection.Metadata;
 using Sheenam.Core.Api.Models.Guests;
 using Sheenam.Core.Api.Models.Guests.Exceptions;
 
