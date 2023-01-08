@@ -16,7 +16,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Hosts
         public async void ShouldThrowHostValidationExceptionOnAddWhenHostIsNullAndLogItAsync()
         {
             // given
-            Host nullHost = null;
+            Host noHost = null;
             var nullHostException = new NullHostException();
 
             var expectedHostValidationException =
@@ -24,7 +24,7 @@ namespace Sheenam.Core.Api.Tests.Unit.Services.Foundation.Hosts
 
             // when
             ValueTask<Host> addHostTask = 
-                this.hostService.AddHostAsync(nullHost);
+                this.hostService.AddHostAsync(noHost);
 
             // then
             await Assert.ThrowsAsync<HostValidationException>(() => 
